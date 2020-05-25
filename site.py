@@ -35,7 +35,7 @@ def createPost(url, body):
 
 	# write the html file
 	f = open(url, "w")
-	f.write(html_header + body.encode('utf-8') + html_footer)
+	f.write(html_header + body.encode('utf-8').decode() + html_footer)
 	f.close
 
 def createHTML(root_dir):
@@ -93,7 +93,7 @@ def createHTML(root_dir):
 			HTML = HTML + "<div id=\"index\"><a href=\"index.html\">previous page</a></div>"
 		elif page == int(ceil(totalPosts / postsPerPage)) and int(ceil(totalPosts / postsPerPage)) > 1:
 			HTML = HTML + "<div id=\"index\"><a href=\"page" + str(page - 1) + ".html\">previous page</a></div>"
-		elif page <> 1 and page <> 2 and int(ceil(totalPosts / postsPerPage)) > 1:
+		elif page != 1 and page != 2 and int(ceil(totalPosts / postsPerPage)) > 1:
 			HTML = HTML + "<div id=\"index\"><a href=\"page" + str(page - 1) + ".html\">previous page</a> - "
 			HTML = HTML + "<a href=\"page" + str(page + 1) + ".html\">next page</a><br />"
 			HTML = HTML + "</div>"
@@ -106,13 +106,13 @@ def createHTML(root_dir):
 		# if it's the first page, calls it index.html, else calls it page#.html
 		if page == 1:
 			f = open("index.html", "w")
-			f.write(html_header + HTML.encode('utf-8') + html_footer)
+			f.write(html_header + HTML.encode('utf-8').decode() + html_footer)
 			f.close
-			print "Writing index.html..."
+			print("Writing index.html...")
 		else:
-			print "Writing page" + str(page) + ".html"
+			print("Writing page" + str(page) + ".html")
 			f = open("page" + str(page) + ".html", "w")
-			f.write(html_header + HTML.encode('utf-8') + html_footer)
+			f.write(html_header + HTML.encode('utf-8').decode() + html_footer)
 			f.close
 
 
@@ -121,8 +121,8 @@ def main(argv=None):
 		argv = sys.argv
 
 	if len(argv) != 2:
-		print "Usage:"
-		print "site.py root-dir-for-the-text-files/"
+		print("Usage:")
+		print("site.py root-dir-for-the-text-files/")
 		sys.exit(2)
 
 	# define the root dir where the text files are 

@@ -1,0 +1,11 @@
+Blog engine rewritten
+===================
+
+Attention crew, main engine rewritten!
+
+This blog is all made with static content and based on text files written in [Markdown](http://daringfireball.net/projects/markdown/). Those files are parsed by a python script that generates the HTML files which are then rsynced to my main server.
+
+I tried thinkering with [jekyll](https://github.com/mojombo/jekyll/), [nanoc](http://nanoc.stoneship.org/), and other static site generators, but I found that they offered way too much, so I made my own one, now rewritten to use [Markdown](http://daringfireball.net/projects/markdown/) instead of [reStructuredText](http://docutils.sourceforge.net/rst.html).
+
+Let's see where this leads me to!
+
