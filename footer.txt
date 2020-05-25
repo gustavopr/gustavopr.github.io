@@ -1,0 +1,11 @@
+<div id="footer">
+<div id="footerleft">copyleft - share alike</div>
+<div id="footerright">python / Markdown</div>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
+
