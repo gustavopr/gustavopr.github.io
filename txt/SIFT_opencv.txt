@@ -1,0 +1,10 @@
+Using SIFT with Python
+=====================
+
+Recently, I've being toying with image comparison algorithms in Python and, when I tried to use [SIFT](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_sift_intro/py_sift_intro.html), supposedly availabe in [opencv](https://opencv.org), I dicovered that it was not there!
+
+Searching for clues, I discovered that [SIFT](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_sift_intro/py_sift_intro.html) is a [patented algo](https://stackoverflow.com/questions/37039224/attributeerror-module-object-has-no-attribute-xfeatures2d-python-opencv-2), so it was removed from that library. But it was once available, and you can use an old version of the lib in order to use it.
+
+In Linux/macOS/Windows, you can use opencv up to version 3.4.2.17 and still use [SIFT](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_sift_intro/py_sift_intro.html):
+
+> pip install opencv-python==3.4.2.17 opencv-contrib-python==3.4.2.17
